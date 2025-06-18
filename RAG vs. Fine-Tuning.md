@@ -57,8 +57,6 @@ RAG separates **language modeling** from **knowledge storage**. Instead of encod
 
 ### 🔍 RAG Architecture Components
 
-### 🔍 RAG Architecture Components
-
 ```plaintext
 User Query
    │
