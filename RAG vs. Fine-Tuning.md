@@ -73,7 +73,7 @@ User Query
                             │
                             ▼
                   Final Grounded Response
-
+```
 
 ### 🛠️ Tools & Frameworks
 - [LangChain](https://docs.langchain.com/)
