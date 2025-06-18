@@ -1,10 +1,10 @@
-## 🔧 Fine-Tuning Strategies: Full, LoRA, and QLoRA
+## Fine-Tuning Strategies: Full, LoRA, and QLoRA
 
 Large Language Models (LLMs) are powerful but computationally expensive to fine-tune. This section outlines different strategies for adapting LLMs to specific tasks or domains, including full-parameter fine-tuning, Low-Rank Adaptation (LoRA), and Quantized LoRA (QLoRA).
 
 ---
 
-### 🧠 Full-Parameter Fine-Tuning
+### Full-Parameter Fine-Tuning
 
 **Full fine-tuning** involves updating *all* of a model’s parameters across multiple training epochs. While effective in adapting models to new tasks or domains, it requires massive compute and memory.
 
@@ -18,7 +18,7 @@ Large Language Models (LLMs) are powerful but computationally expensive to fine-
 
 ---
 
-### 🛠️ LoRA (Low-Rank Adaptation)
+### LoRA (Low-Rank Adaptation)
 
 **LoRA** is a parameter-efficient fine-tuning method that injects small, trainable "adapter" matrices into the model’s architecture, allowing updates without modifying the original weights directly.
 
@@ -41,7 +41,7 @@ This greatly reduces the number of trainable parameters and memory requirements,
 | 512  | 86M    | 117M   | 270M   | 434M   |
 | 1024 | 171M   | 233M   | 542M   | 869M   |
 
-> ✅ **Note:** Even at low ranks (e.g. 8 or 16), LoRA performs competitively on many tasks.
+> **Note:** Even at low ranks (e.g. 8 or 16), LoRA performs competitively on many tasks.
 
 #### Does Rank Matter?
 
@@ -49,7 +49,7 @@ The core idea is that **many downstream tasks are intrinsically low-rank**, mean
 
 ---
 
-### 💡 QLoRA (Quantized LoRA)
+### QLoRA (Quantized LoRA)
 
 **QLoRA** builds on LoRA by incorporating quantization — reducing the model's precision to save memory while retaining accuracy.
 
