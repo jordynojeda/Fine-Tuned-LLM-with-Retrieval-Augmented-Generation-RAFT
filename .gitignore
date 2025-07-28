@@ -137,4 +137,7 @@ src/local_models/
 
 .vscode/
 
+# Hugging Face models
+# Ignore all model files
+models/
 *.gguf

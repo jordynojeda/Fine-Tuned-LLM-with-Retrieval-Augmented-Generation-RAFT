@@ -274,7 +274,7 @@ def load_rag_components():
     documents_path = f"{rag_data_path}/documents.pkl"
     
     # Check if PDF folder exists
-    pdf_folder = "/Users/jordynojeda/Documents/Fine-Tuned-LLM-with-Retrieval-Augmented-Generation-FT-RAG/streamlit/financial_advisor_documents"
+    pdf_folder = "./financial_advisor_documents"
     if not os.path.exists(pdf_folder):
         st.error(f"PDF folder '{pdf_folder}' does not exist. Please create it and add PDF files.")
         return None, [], []
