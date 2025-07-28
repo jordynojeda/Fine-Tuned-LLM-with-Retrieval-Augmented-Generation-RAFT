@@ -10,13 +10,21 @@ from typing import List, Dict, Any, Tuple
 import PyPDF2
 import re
 from pathlib import Path
+from huggingface_hub import hf_hub_download
 
 # Cache model to avoid reloading
 @st.cache_resource
 def load_llm():
-    """Load the fine-tuned LLM model"""
+    """Load the fine-tuned LLM model from Hugging Face Hub"""
+    model_path = hf_hub_download(
+        repo_id="jordynojeda/Meta-Llama-3.1-8B-Instruct-bnb-4bit-financial-advisor-qlora-GGUF",  # Change this
+        filename="unsloth.Q4_K_M.gguf",
+        local_dir="models",  # Optional local cache folder
+        cache_dir="models"   # Optional: ensures reuse
+    )
+    
     return Llama(
-        model_path="../models/Meta-Llama-3.1-8B-Instruct-bnb-4bit-financial-advisor-qlora-GGUF/financial_advisor.Q4_K_M.gguf",
+        model_path=model_path,
         n_ctx=10048,
         n_gpu_layers=32,
         chat_format="chatml",
