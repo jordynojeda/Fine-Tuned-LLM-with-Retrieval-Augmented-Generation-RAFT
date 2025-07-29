@@ -1,10 +1,10 @@
-modal==1.0.4
-datasets==3.6.0
-llama_cpp_python==0.3.9
-torch==2.7.1
-llama_cpp_python==0.3.9
-sentence-transformers==5.0.0
-faiss-cpu==1.11.0
+# modal==1.0.4
+streamlit
+llama-cpp-python==0.3.9
+torch==2.2.2
+sentence-transformers==2.2.2
+faiss-cpu==1.7.4
 PyPDF2==3.0.1
-PyMuPDF==1.26.3
-huggingface-hub==0.33.1
+PyMuPDF==1.22.5
+huggingface-hub==0.21.4
+datasets==2.16.1
