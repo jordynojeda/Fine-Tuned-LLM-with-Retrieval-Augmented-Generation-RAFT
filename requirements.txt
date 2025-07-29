@@ -1,10 +1,24 @@
-# modal==1.0.4
-streamlit
+# Use Streamlit 1.25+ for improved stability
+streamlit==1.47.1
+
+# LLaMA CPP - needs a compatible version with Python 3.10/3.11 (Linux x86_64)
 llama-cpp-python==0.3.9
-torch==2.2.2
-sentence-transformers==2.2.2
-faiss-cpu==1.7.4
+
+# Compatible PyTorch version for Python 3.10/3.11 (Linux CPU)
+torch==2.7.1
+
+# Text embeddings & vector search
+sentence-transformers==2.6.1
+faiss-cpu
+
+# PDF parsing
 PyPDF2==3.0.1
-PyMuPDF==1.22.5
-huggingface-hub==0.21.4
-datasets==2.16.1
+PyMuPDF==1.26.3
+
+# HuggingFace dataset/tools
+huggingface-hub==0.33.1
+datasets==2.18.0
+
+# Optional - comment out if not needed
+# modal==1.0.4
+
