@@ -21,7 +21,7 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          git clone https://jordynojeda:$HF_TOKEN@huggingface.co/spaces/jordynojeda/your-space-name hf-space
+          git clone https://jordynojeda:$HF_TOKEN@huggingface.co/spaces/jordynojeda/Fine-Tuned-LLM-with-Retrieval-Augmented-Generation-FT-RAG hf-space
           rsync -av --exclude='.git' ./ hf-space/
           cd hf-space
           git add .
