@@ -4,11 +4,6 @@ import os
 from pathlib import Path
 import base64
 import fitz  # PyMuPDF
-from io import BytesIO
-import re
-
-# Add the parent directory to the path to import shared utilities
-sys.path.append(str(Path(__file__).parent.parent))
 
 from utils.shared_utils import (
     load_llm,
@@ -71,7 +66,7 @@ def display_pdf_page(pdf_path, page_number, source_file):
 def get_pdf_path(source_file):
     """Get the full path to the PDF file"""
     # Adjust this path based on your PDF storage location
-    pdf_folder = Path("financial_advisor_documents")  # Modify this path as needed
+    pdf_folder = Path("streamlit/financial_advisor_documents")  # Modify this path as needed
     return pdf_folder / source_file
 
 @st.cache_resource
@@ -145,8 +140,6 @@ def display_retrieved_context(relevant_docs, relevant_metadata):
 
 def handle_chat_interaction(llm, faiss_index, chunk_metadata, knowledge_base):
     """Handle the chat interface and user interactions."""
-    # Apply styling once
-    #apply_text_consistency()
     
     st.header("💬 Enhanced Chat Interface")
     

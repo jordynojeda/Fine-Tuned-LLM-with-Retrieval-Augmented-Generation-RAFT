@@ -19,8 +19,8 @@ def load_llm():
     model_path = hf_hub_download(
         repo_id="jordynojeda/Meta-Llama-3.1-8B-Instruct-bnb-4bit-financial-advisor-qlora-GGUF",  # Change this
         filename="unsloth.Q4_K_M.gguf",
-        local_dir="models",  # Optional local cache folder
-        cache_dir="models"   # Optional: ensures reuse
+        local_dir="streamlit/models",  # Optional local cache folder
+        cache_dir="streamlit/models"   # Optional: ensures reuse
     )
     
     return Llama(
@@ -268,13 +268,13 @@ def load_rag_components():
     """Load or create RAG components (knowledge base, embeddings, FAISS index)"""
     
     # Check if RAG components exist and are up to date
-    rag_data_path = "./rag_data"
+    rag_data_path = "./streamlit/rag_data"
     index_path = f"{rag_data_path}/faiss_index.index"
     metadata_path = f"{rag_data_path}/chunk_metadata.pkl"
     documents_path = f"{rag_data_path}/documents.pkl"
     
     # Check if PDF folder exists
-    pdf_folder = "./financial_advisor_documents"
+    pdf_folder = "./streamlit/financial_advisor_documents"
     if not os.path.exists(pdf_folder):
         st.error(f"PDF folder '{pdf_folder}' does not exist. Please create it and add PDF files.")
         return None, [], []
