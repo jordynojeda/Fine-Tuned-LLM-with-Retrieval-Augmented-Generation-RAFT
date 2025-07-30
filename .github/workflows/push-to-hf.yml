@@ -1,0 +1,16 @@
+name: Sync to Hugging Face Space
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: huggingface/hub-action@v1
+        with:
+          repo: jordynojeda/Fine-Tuned-LLM-with-Retrieval-Augmented-Generation-FT-RAG
+          token: ${{ secrets.HF_TOKEN }}
