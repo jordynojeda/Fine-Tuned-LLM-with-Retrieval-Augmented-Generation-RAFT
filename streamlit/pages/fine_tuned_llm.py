@@ -121,7 +121,7 @@ def handle_chat_interaction(llm):
                 try:
                     response = llm.create_chat_completion(
                         messages=get_chat_history(SESSION_KEY),
-                        max_tokens=1024,  # Quadruple the current limit
+                        max_tokens=2048,  # Quadruple the current limit
                         temperature=0.7,
                         stop=["<|eot_id|>"],  # Add more natural stops
                     )
